@@ -36,10 +36,10 @@
                 <td>{{contact.email}}</td>
                 <td>{{contact.phone}}</td>
                 <td>
-                    <button @click="showContact(contact.id)" class="btn btn-default">Edit</button>
+                    <button @click="showContact(contact.id)" class="btn btn-default btn-xs">Edit</button>
                 </td>
                 <td>
-                    <button @click="deleteContact(contact.id)" class="btn btn-danger">Delete</button>
+                    <button @click="deleteContact(contact.id)" class="btn btn-danger btn-xs">Delete</button>
                 </td>
             </tr>
             </tbody>

@@ -44074,7 +44074,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  staticClass: "btn btn-default",
+                  staticClass: "btn btn-default btn-xs",
                   on: {
                     click: function($event) {
                       _vm.showContact(contact.id)
@@ -44089,7 +44089,7 @@ var render = function() {
               _c(
                 "button",
                 {
-                  staticClass: "btn btn-danger",
+                  staticClass: "btn btn-danger btn-xs",
                   on: {
                     click: function($event) {
                       _vm.deleteContact(contact.id)
