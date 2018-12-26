@@ -43510,7 +43510,7 @@ exports = module.exports = __webpack_require__(45)(false);
 
 
 // module
-exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
+exports.push([module.i, "\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n", ""]);
 
 // exports
 
@@ -43814,6 +43814,23 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -43836,7 +43853,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
         fetchContactList: function fetchContactList() {
             var _this = this;
 
-            console.log('Fetching contacts...');
+            console.log('fetching contacts...');
             axios.get('api/contacts').then(function (response) {
                 console.log(response.data);
                 _this.list = response.data;
@@ -43879,11 +43896,18 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
                 self.edit = false;
                 self.fetchContactList();
             }).catch(function (error) {
+                self.contact.name = '';
+                self.contact.email = '';
+                self.contact.phone = '';
+                self.edit = false;
+                self.fetchContactList();
                 console.log(error);
             });
         },
         deleteContact: function deleteContact(id) {
-            axios.delete('api/contact/' + id).then(function (response) {
+            var self = this;
+            var params = Object.assign({}, self.contact);
+            axios.delete('api/contact/' + id, params).then(function () {
                 self.fetchContactList();
             }).catch(function (error) {
                 console.log(error);
@@ -44033,51 +44057,75 @@ var render = function() {
     _vm._v(" "),
     _c("h1", [_vm._v("Contacts")]),
     _vm._v(" "),
-    _c(
-      "ul",
-      { staticClass: "list-group" },
-      _vm._l(_vm.list, function(contact) {
-        return _c("li", { staticClass: "list-group-item" }, [
-          _c("strong", [_vm._v(_vm._s(contact.name))]),
-          _vm._v(
-            " " +
-              _vm._s(contact.email) +
-              " " +
-              _vm._s(contact.phone) +
-              "\n            "
-          ),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-default",
-              on: {
-                click: function($event) {
-                  _vm.showContact(contact.id)
-                }
-              }
-            },
-            [_vm._v("Edit")]
-          ),
-          _vm._v(" "),
-          _c(
-            "button",
-            {
-              staticClass: "btn btn-danger",
-              on: {
-                click: function($event) {
-                  _vm.deleteContact(contact.id)
-                }
-              }
-            },
-            [_vm._v("Delete")]
-          )
-        ])
-      }),
-      0
-    )
+    _c("table", { staticClass: "table" }, [
+      _vm._m(0),
+      _vm._v(" "),
+      _c(
+        "tbody",
+        _vm._l(_vm.list, function(contact) {
+          return _c("tr", [
+            _c("td", [_vm._v(_vm._s(contact.name))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(contact.email))]),
+            _vm._v(" "),
+            _c("td", [_vm._v(_vm._s(contact.phone))]),
+            _vm._v(" "),
+            _c("td", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-default",
+                  on: {
+                    click: function($event) {
+                      _vm.showContact(contact.id)
+                    }
+                  }
+                },
+                [_vm._v("Edit")]
+              )
+            ]),
+            _vm._v(" "),
+            _c("td", [
+              _c(
+                "button",
+                {
+                  staticClass: "btn btn-danger",
+                  on: {
+                    click: function($event) {
+                      _vm.deleteContact(contact.id)
+                    }
+                  }
+                },
+                [_vm._v("Delete")]
+              )
+            ])
+          ])
+        }),
+        0
+      )
+    ])
   ])
 }
-var staticRenderFns = []
+var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("thead", [
+      _c("tr", [
+        _c("th", [_vm._v("Name")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Email")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Phone")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Update")]),
+        _vm._v(" "),
+        _c("th", [_vm._v("Remove")])
+      ])
+    ])
+  }
+]
 render._withStripped = true
 module.exports = { render: render, staticRenderFns: staticRenderFns }
 if (false) {
