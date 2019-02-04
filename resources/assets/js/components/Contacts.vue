@@ -19,6 +19,7 @@
                 <button v-show="edit" type="submit" class="btn btn-primary">Update Contact</button>
             </div>
         </form>
+
         <h1>Contacts</h1>
         <table class="table">
             <thead>
