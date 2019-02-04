@@ -88,7 +88,6 @@
                         self.contact.phone = '';
                         self.edit = false;
                         self.fetchContactList();
-
                     })
                     .catch(function (error) {
                         console.log(error);
@@ -142,5 +141,8 @@
 </script>
 
 <style scoped>
-
+    table thead tr th {
+        background-color: #133d55;
+        color: white;
+    }
 </style>
