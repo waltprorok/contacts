@@ -43822,6 +43822,8 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -43918,7 +43920,7 @@ var render = function() {
   return _c("div", [
     _vm._m(0),
     _vm._v(" "),
-    _c("h3", [_vm._v("Feb 6-8 2020")]),
+    _c("h3", [_vm._v("February 6-8 2020")]),
     _vm._v(" "),
     _c("address", [
       _vm._v(
@@ -44059,6 +44061,12 @@ var render = function() {
         ])
       ]
     ),
+    _vm._v(" "),
+    _c("small", [
+      _vm._v(
+        "*The trip to the conference has not been approved as of 10/2/2019."
+      )
+    ]),
     _vm._v(" "),
     _c("h1", [_vm._v("Attendees")]),
     _vm._v(" "),

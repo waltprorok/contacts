@@ -1,7 +1,7 @@
 <template>
     <div>
         <h2>Sign Up for <a href="https://2020.sunshinephp.com/" target="_blank">Sunshine PHP Conference</a></h2>
-        <h3>Feb 6-8 2020</h3>
+        <h3>February 6-8 2020</h3>
         <address>Embassy Suites Miami International
             3974 NW South River Drive
             Miami, Florida 33142
@@ -27,6 +27,8 @@
                 <button v-show="edit" type="submit" class="btn btn-primary">Update Attendee</button>
             </div>
         </form>
+
+        <small>*The trip to the conference has not been approved as of 10/2/2019.</small>
 
         <h1>Attendees</h1>
         <table class="table">
