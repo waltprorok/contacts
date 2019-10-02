@@ -43821,6 +43821,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -44036,7 +44037,7 @@ var render = function() {
               staticClass: "btn btn-primary",
               attrs: { type: "submit" }
             },
-            [_vm._v("New Contact")]
+            [_vm._v("New Attendee")]
           ),
           _vm._v(" "),
           _c(
@@ -44053,7 +44054,7 @@ var render = function() {
               staticClass: "btn btn-primary",
               attrs: { type: "submit" }
             },
-            [_vm._v("Update Contact")]
+            [_vm._v("Update Attendee")]
           )
         ])
       ]

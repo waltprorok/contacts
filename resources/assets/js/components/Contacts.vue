@@ -8,6 +8,7 @@
         </address>
 
         <h4>If you are interested in attending the conference please add your name, email, and phone number below.</h4>
+
         <form action="#" @submit.prevent="edit ? updateContact(contact.id) : createContact()">
             <div class="form-group">
                 <label>Name</label>
@@ -22,8 +23,8 @@
                 <input v-model="contact.phone" type="text" name="phone" class="form-control">
             </div>
             <div class="form-group">
-                <button v-show="!edit" type="submit" class="btn btn-primary">New Contact</button>
-                <button v-show="edit" type="submit" class="btn btn-primary">Update Contact</button>
+                <button v-show="!edit" type="submit" class="btn btn-primary">New Attendee</button>
+                <button v-show="edit" type="submit" class="btn btn-primary">Update Attendee</button>
             </div>
         </form>
 
