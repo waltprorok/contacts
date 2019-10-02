@@ -1,6 +1,13 @@
 <template>
     <div>
-        <h1>Add Contact</h1>
+        <h2>Sign Up for <a href="https://2020.sunshinephp.com/" target="_blank">Sunshine PHP Conference</a></h2>
+        <h3>Feb 6-8 2020</h3>
+        <address>Embassy Suites Miami International
+            3974 NW South River Drive
+            Miami, Florida 33142
+        </address>
+
+        <h4>If you are interested in attending the conference please add your name, email, and phone number below.</h4>
         <form action="#" @submit.prevent="edit ? updateContact(contact.id) : createContact()">
             <div class="form-group">
                 <label>Name</label>
@@ -20,7 +27,7 @@
             </div>
         </form>
 
-        <h1>Contacts</h1>
+        <h1>Attendees</h1>
         <table class="table">
             <thead>
             <tr>

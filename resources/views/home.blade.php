@@ -2,7 +2,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="csrf-token" content="{{csrf_token()}}">
-    <title>Contacts</title>
+    <title>Sunshine PHP - Attendees</title>
     <link rel="stylesheet" href="/css/app.css"/>
 </head>
 <body>

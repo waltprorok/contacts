@@ -43814,6 +43814,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 //
 //
 //
+//
+//
+//
+//
+//
+//
+//
 
 /* harmony default export */ __webpack_exports__["default"] = ({
     data: function data() {
@@ -43908,7 +43915,21 @@ var render = function() {
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
   return _c("div", [
-    _c("h1", [_vm._v("Add Contact")]),
+    _vm._m(0),
+    _vm._v(" "),
+    _c("h3", [_vm._v("Feb 6-8 2020")]),
+    _vm._v(" "),
+    _c("address", [
+      _vm._v(
+        "Embassy Suites Miami International\n        3974 NW South River Drive\n        Miami, Florida 33142\n    "
+      )
+    ]),
+    _vm._v(" "),
+    _c("h4", [
+      _vm._v(
+        "If you are interested in attending the conference please add your name, email, and phone number below."
+      )
+    ]),
     _vm._v(" "),
     _c(
       "form",
@@ -44038,10 +44059,10 @@ var render = function() {
       ]
     ),
     _vm._v(" "),
-    _c("h1", [_vm._v("Contacts")]),
+    _c("h1", [_vm._v("Attendees")]),
     _vm._v(" "),
     _c("table", { staticClass: "table" }, [
-      _vm._m(0),
+      _vm._m(1),
       _vm._v(" "),
       _c(
         "tbody",
@@ -44090,6 +44111,19 @@ var render = function() {
   ])
 }
 var staticRenderFns = [
+  function() {
+    var _vm = this
+    var _h = _vm.$createElement
+    var _c = _vm._self._c || _h
+    return _c("h2", [
+      _vm._v("Sign Up for "),
+      _c(
+        "a",
+        { attrs: { href: "https://2020.sunshinephp.com/", target: "_blank" } },
+        [_vm._v("Sunshine PHP Conference")]
+      )
+    ])
+  },
   function() {
     var _vm = this
     var _h = _vm.$createElement
